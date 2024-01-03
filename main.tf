@@ -2,7 +2,7 @@ resource "aws_launch_configuration" "web_server_as" {
     image_id           = "ami-00b8917ae86a424c9"
     instance_type = "t2.micro"
     security_groups = [aws_security_group.web_server.id]
-
+}
   resource "aws_elb" "web_server_lb"{
      name = "web-server-lb"
      security_groups = [aws_security_group.web_server.id]
